@@ -39,7 +39,7 @@ $ npm run build
 
 #### Compiling Docs (TODO)
 
-1. Just modify `/src/` and run:
+1. Just modify `/src/wnc/` files and be sure to use JSDoc when coding and run:
 ```
 $ npm run docs
 ```
