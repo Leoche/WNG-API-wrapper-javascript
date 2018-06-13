@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open-page example.html",
+    "docs": "echo 'TODO'",
     "build": "webpack --mode production"
   },
   "repository": {
