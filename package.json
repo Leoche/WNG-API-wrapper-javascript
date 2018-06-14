@@ -4,7 +4,7 @@
   "description": "A Javascript wrapper for WNG API",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open-page example.html",
+    "dev": "webpack-dev-server --mode development --port 80 --open-page example.html",
     "docs": "jsdoc2md src/lib/*.js  > docs/DOCUMENTATION.md",
     "build": "webpack --mode production"
   },

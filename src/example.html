@@ -10,6 +10,10 @@
       display: block;
       margin-bottom: 8px;
     }
+    .button.danger{
+      background: red;
+      color:white;
+    }
     .button + .button{
       margin-left: 0;
     }
@@ -30,16 +34,19 @@
       <header style="display:flex;justify-content: space-between;">
         <h1 class="is-vertical-align">Example Tests Page</h1>
         <div class="is-vertical-align is-text-right">
-          <input id="KEY" type="text" placeholder="Your consumerKey">
+          <input id="KEY" type="text" placeholder="Your consumerKey" value="aLe20nEtlBxoUOfbyVWqhNYSmXK7MgJH6ds">
         </div>
       </header>
       <hr>
       <div class="row">
-        <div class="col-5">
-          <a id="SETKEY" class="button primary">Set consumerKey</a>
-          <a class="button primary">TEST</a>
+        <div class="col-3">
+          <a id="APIS" class="button primary" disabled="true">Get API List</a>
+          <a id="SETKEY"  class="button primary">Set consumerKey</a>
+          <a id="TESTKEY" class="button primary" disabled="true">Test consumerKey</a>
+          <a id="REVOKE" class="button danger" disabled="true">Revoke consumerKey</a>
+          <a id="ME" class="button primary" disabled="true">Get Profile</a>
         </div>
-        <div class="col-7">
+        <div class="col-9">
           <div class="card">
             <header style="display:flex;justify-content: space-between;">
               <h4>Logs</h4>

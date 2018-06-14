@@ -1,4 +1,5 @@
 import Promise from 'promise-polyfill'
+import WngResponse from './WngResponse.js'
 import 'whatwg-fetch'
 
 /**
@@ -48,8 +49,6 @@ class WngRequest {
    */
   createHeader () {
     return {
-      'cache-control': 'no-cache',
-      'Access-Control-Allow-Origin':'*',
       'x-wng-consumer': this.consumerKey,
       'x-wng-endpoint': this.endpoint,
       'x-wng-method': this.method
@@ -74,28 +73,19 @@ class WngRequest {
 
   /**
    * Send the request
-   * @return {Object} Response object
+   * @return {WngResponse} A WngResponse object filled with response
    */
   send () {
-    fetch(this.endpoint + this.path, this.prepared)
-      .then((response) => {
-        return response.json()
-      }).then((json) => {
-        console.log('parsed json', json)
-      }).catch((ex) => {
-        console.log('parsing failed', ex)
-      })
-  }
-
-  /**
-   * Send the request
-   * @return {Object} Response object
-   */
-  sendXML () {
-    const XHR = new XMLHttpRequest()
-    XHR.open(this.prepared.method, this.endpoint + this.path)
-    Object.entries(this.prepared.headers).forEach(item => XHR.setRequestHeader(item[0], item[1]))
-    XHR.send(this.prepared.body)
+    return new Promise((resolve, reject) => {
+      fetch(this.endpoint + this.path, this.prepared)
+        .then((response) => {
+          return response.json()
+        }).then((json) => {
+          resolve(new WngResponse(json))
+        }).catch((err) => {
+          reject(new Error('Parsing failed', err))
+        })
+    })
   }
 
   /**
