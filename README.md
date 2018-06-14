@@ -21,7 +21,7 @@ yarn install
 
 #### Hot Compiling project (Dev mode)
 
-1. Just modify `/src/` and run:
+- Just modify `/src/` and run:
 ```
 $ npm run dev
 ```
@@ -30,7 +30,7 @@ $ npm run dev
 
 #### Compiling project (Prod mode)
 
-1. Just modify `/src/` and run:
+- Just modify `/src/` and run:
 ```
 $ npm run build
 ```
@@ -39,7 +39,7 @@ $ npm run build
 
 #### Compiling Docs
 
-1. Just modify `/src/lib/` files and be sure to use JSDoc when coding and run:
+- Just modify `/src/lib/` files and be sure to use JSDoc when coding and run:
 ```
 $ npm run docs
 ```
