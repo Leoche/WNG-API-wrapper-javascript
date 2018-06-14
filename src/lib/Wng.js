@@ -23,15 +23,44 @@ class Wng {
       throw new Error('$consumerKey isn\'t defined or isn\'t a string')
     }
   }
+
   /**
    * Construct a GET Request
    * @param  {String} $path         API Path
-   * @param  {Object} $data         Data object passed to API
-   * @return {WngRequest} return built WngRequest
+   * @return {WngRequest} A built GET WngRequest
    */
-  get ($path, $data = {}) {
-    // Calls API with data
-    return new WngRequest('GET', {})
+  get ($path) {
+    return new WngRequest(this.endpoint, this.consumerKey).create('GET', $path, {})
+  }
+
+  /**
+   * Construct a PUT Request
+   * @param  {String} $path         API Path
+   * @param  {Object} $data         Data object passed to API
+   * @return {WngRequest} A built PUT WngRequest
+   */
+  put ($path, $data = {}) {
+    return new WngRequest(this.endpoint, this.consumerKey).create('PUT', $path, $data)
+  }
+
+  /**
+   * Construct a POST Request
+   * @param  {String} $path         API Path
+   * @param  {Object} $data         Data object passed to API
+   * @return {WngRequest} A built POST WngRequest
+   */
+  post ($path, $data = {}) {
+    return new WngRequest(this.endpoint, this.consumerKey).create('POST', $path, $data)
+  }
+
+  /**
+   * Construct a DELETE Request
+   * @param  {String} $path         API Path
+   * @param  {Object} $data         Data object passed to API
+   * @return {WngRequest} A built DELETE WngRequest
+   */
+  delete ($path, $data = {}) {
+    return new WngRequest(this.endpoint, this.consumerKey).create('DELETE', $path, $data)
   }
 }
 export default Wng
