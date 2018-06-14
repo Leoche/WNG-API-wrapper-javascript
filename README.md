@@ -26,7 +26,7 @@ yarn install
 $ npm run dev
 ```
 
-> This will open up un hot reload server, and go to http://localhost:8080 (It will be opened automaticaly anyway...)
+> This will open up un hot reload server, and go to http://localhost:8080/example.js (It will be opened automaticaly anyway...)
 
 #### Compiling project (Prod mode)
 
