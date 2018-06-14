@@ -3,8 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Example Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <style>
+    .button{
+      cursor: pointer;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .button + .button{
+      margin-left: 0;
+    }
+    .button[disabled]{
+      cursor: not-allowed;
+      opacity:.3;
+      pointer-events: none;
+    }
+    .error{
+      color: #d00c0c;
+    }
+  </style>
 </head>
 <body>
-  Example Page <span>...</span>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <header style="display:flex;justify-content: space-between;">
+        <h1 class="is-vertical-align">Example Tests Page</h1>
+        <div class="is-vertical-align is-text-right">
+          <input id="KEY" type="text" placeholder="Your consumerKey">
+        </div>
+      </header>
+      <hr>
+      <div class="row">
+        <div class="col-5">
+          <a id="SETKEY" class="button primary">Set consumerKey</a>
+          <a class="button primary">TEST</a>
+        </div>
+        <div class="col-7">
+          <div class="card">
+            <header style="display:flex;justify-content: space-between;">
+              <h4>Logs</h4>
+              <a id="CLEAR" href="#">Clear Logs</a>
+            </header>
+            <div class="logs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
 </body>
 </html>
