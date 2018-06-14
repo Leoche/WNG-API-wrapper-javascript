@@ -4,7 +4,7 @@ A JS wrapper for wng api
 
 ## Documentation
 
-// Todo
+[See here a documentation of classes](docs/DOCUMENTATION.md)
 
 ## Development
 
@@ -37,11 +37,11 @@ $ npm run build
 
 > Compiled project will be in `/dist/`
 
-#### Compiling Docs (TODO)
+#### Compiling Docs
 
-1. Just modify `/src/wnc/` files and be sure to use JSDoc when coding and run:
+1. Just modify `/src/lib/` files and be sure to use JSDoc when coding and run:
 ```
 $ npm run docs
 ```
 
-> Compiled project will be in `README.MD` (yes in this file :) )
+> Compiled project will be in `docs/DOCUMENTATION.MD`

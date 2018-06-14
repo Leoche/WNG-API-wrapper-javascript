@@ -1,6 +1,6 @@
-import wng from './wng/wng.class.js'
+import Wng from './wng/Wng.js'
 
 window.onload = () => {
   document.querySelector('span').innerHTML = 'It work!'
-  window.wng = new wng('test')
+  window.wng = new Wng('test')
 }

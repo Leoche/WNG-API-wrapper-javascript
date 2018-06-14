@@ -1,10 +1,10 @@
-import WngRequest from './WngRequest.class.js'
+import WngRequest from './WngRequest.js'
 /**
  * Wng class
  * @class
  * @author Léo DESIGAUX
  */
-export default class Wng {
+class Wng {
   /**
    * Wng Constructor, adds 'wng' to window object on success
    * @constructs Wng
@@ -19,13 +19,14 @@ export default class Wng {
     this.endpoint = 'https://alpha.api-eu.whyno.group'
   }
   /**
-   * Constructa GET Request
+   * Construct a GET Request
    * @param  {String} $path         API Path
-   * @param  {Object} $data          Data object passed to API
-   * @return {wngRequest} return built request
+   * @param  {Object} $data         Data object passed to API
+   * @return {WngRequest} return built WngRequest
    */
   get ($path, $data = {}) {
     // Calls API with data
     return new WngRequest('GET', {})
   }
 }
+export default Wng

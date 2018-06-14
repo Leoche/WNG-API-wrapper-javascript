@@ -3,9 +3,9 @@
  * @class
  * @author Léo DESIGAUX
  */
-export default class WngRequest {
+class WngRequest {
   /**
-   * wngRequest Constructor
+   * WngRequest Constructor
    * @constructs WngRequest
    * @param  {String} $method        Method of request (GET, POST, PUT, DELETE)
    * @param  {Object} $data          Data object passed to request
@@ -22,3 +22,4 @@ export default class WngRequest {
     // Calls API with data
   }
 }
+export default WngRequest
