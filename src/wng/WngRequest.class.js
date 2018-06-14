@@ -3,7 +3,7 @@
  * @class
  * @author Léo DESIGAUX
  */
-export default class wngRequest {
+export default class WngRequest {
   /**
    * wngRequest Constructor
    * @constructs WngRequest
@@ -11,8 +11,8 @@ export default class wngRequest {
    * @param  {Object} $data          Data object passed to request
    */
   constructor ($method, $data) {
-    this.method = method
-    this.data = data
+    this.method = $method
+    this.data = $data
   }
   /**
    * Send the request

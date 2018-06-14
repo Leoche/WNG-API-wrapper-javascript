@@ -1,16 +1,16 @@
-import wngRequest from './wngRequest.class.js'
+import WngRequest from './WngRequest.class.js'
 /**
  * Wng class
  * @class
  * @author Léo DESIGAUX
  */
-export default class wng {
+export default class Wng {
   /**
-   * Wng Constructor
-   * @constructs wng
+   * Wng Constructor, adds 'wng' to window object on success
+   * @constructs Wng
    * @param  {String} $consumerKey  Consumer key needed to call API, get one here https://cas.whyno.group/request_credential
    */
-  constructor ($consumerKey = "") {
+  constructor ($consumerKey = '') {
     this.endpoints = {
       'eu': 'https://api-eu.whyno.group',
       'ca': 'https://api-ca.whyno.group',
@@ -26,6 +26,6 @@ export default class wng {
    */
   get ($path, $data = {}) {
     // Calls API with data
-    return new wngRequest('GET',{})
+    return new WngRequest('GET', {})
   }
 }
