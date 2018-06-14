@@ -17,6 +17,11 @@ class Wng {
       'us': 'https://api-us.whyno.group'
     }
     this.endpoint = 'https://alpha.api-eu.whyno.group'
+    if (typeof $consumerKey === 'string' && $consumerKey.trim().length > 0) {
+      this.consumerKey = $consumerKey.trim()
+    } else {
+      throw new Error('$consumerKey isn\'t defined or isn\'t a string')
+    }
   }
   /**
    * Construct a GET Request
