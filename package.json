@@ -1,10 +1,10 @@
 {
-  "name": "wngapi-javascript-wrapper",
+  "name": "wngapi-javascript",
   "version": "0.0.1",
   "description": "A Javascript wrapper for WNG API",
-  "main": "index.js",
+  "main": "release/wng.min.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --port 80 --open-page example.html",
+    "dev": "webpack-dev-server --mode development --port 8080 --open-page example.html",
     "docs": "jsdoc2md src/lib/*.js  > docs/DOCUMENTATION.md",
     "example": "webpack --mode production",
     "build": "webpack --config webpack.release.config.js --mode production"
