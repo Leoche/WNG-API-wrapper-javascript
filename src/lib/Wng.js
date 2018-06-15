@@ -64,3 +64,4 @@ class Wng {
   }
 }
 export default Wng
+window.wng = Wng
