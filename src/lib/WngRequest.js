@@ -48,11 +48,14 @@ class WngRequest {
    * @return {Object} An object containing all headers
    */
   createHeader () {
-    return {
-      'x-wng-consumer': this.consumerKey,
+    let headers = {
       'x-wng-endpoint': this.endpoint,
       'x-wng-method': this.method
     }
+    if (this.consumerKey !== null) {
+      headers['x-wng-consumer'] = this.consumerKey
+    }
+    return headers
   }
 
   /**

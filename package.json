@@ -1,8 +1,9 @@
 {
-  "name": "wngapi-javascript",
-  "version": "0.0.1",
+  "name": "wng-api-javascript",
+  "version": "0.0.2",
   "description": "A Javascript wrapper for WNG API",
   "main": "release/wng.min.js",
+  "module": "src/lib/Wng.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --port 8080 --open-page example.html",
     "docs": "jsdoc2md src/lib/*.js  > docs/DOCUMENTATION.md",
@@ -11,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leoche/WNGAPI-javascript-wrapper.git"
+    "url": "git+https://github.com/Leoche/wng-api-javascript.git"
   },
   "keywords": [
     "javascript"
@@ -19,9 +20,9 @@
   "author": "Léo DESIGAUX",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Leoche/WNGAPI-javascript-wrapper/issues"
+    "url": "https://github.com/Leoche/wng-api-javascript/issues"
   },
-  "homepage": "https://github.com/Leoche/WNGAPI-javascript-wrapper#readme",
+  "homepage": "https://github.com/Leoche/wng-api-javascript#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",

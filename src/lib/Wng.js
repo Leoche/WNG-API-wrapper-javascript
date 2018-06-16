@@ -10,13 +10,17 @@ class Wng {
    * @constructs Wng
    * @param  {String} $consumerKey  Consumer key needed to call API, get one here https://cas.whyno.group/request_credential
    */
-  constructor ($consumerKey = '') {
+  constructor () {
+    this.consumerKey = null
     this.endpoints = {
       'eu': 'https://api-eu.whyno.group',
       'ca': 'https://api-ca.whyno.group',
       'us': 'https://api-us.whyno.group'
     }
     this.endpoint = 'https://alpha.api-eu.whyno.group'
+  }
+
+  setConsumerKey ($consumerKey = '') {
     if (typeof $consumerKey === 'string' && $consumerKey.trim().length > 0) {
       this.consumerKey = $consumerKey.trim()
     } else {
@@ -64,4 +68,4 @@ class Wng {
   }
 }
 export default Wng
-window.wng = Wng
+window.wngapi = Wng
