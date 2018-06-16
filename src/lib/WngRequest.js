@@ -68,8 +68,11 @@ class WngRequest {
       'method': this.method,
       'headers': this.createHeader()
     }
-    if (this.method !== 'GET') {
-      this.prepared.body = JSON.stringify(this.data)
+    if (this.method === 'POST') {
+      let formData = new FormData()
+      formData.append('userdata', JSON.stringify(this.data))
+      formData.append('userfile', null)
+      this.prepared.body = formData
     }
     return this
   }
@@ -96,9 +99,10 @@ class WngRequest {
    * @return {String} A pretty print of request
    */
   debug () {
+    this.prettyPrepared = this.prepared
     return JSON.stringify({
       url: this.endpoint + this.path,
-      options: this.prepared
+      options: this.prettyPrepared
     }, null, 2)
   }
 }

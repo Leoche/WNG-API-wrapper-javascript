@@ -19,7 +19,7 @@ const Log = (msg, err = false, pre = false) => {
 let WNG, consumerKey
 
 window.onload = () => {
-  WNG = null
+  WNG = new Wng()
   Log('Initialized...')
 }
 
@@ -56,12 +56,35 @@ $('#APIS').onclick = evt => {
   }
 }
 
+$('#GETKEY').onclick = evt => {
+  $('.logs').innerHTML = ''
+  try {
+    let request = WNG.post('/auth/credential', {
+      EXPIRATION: 0,
+      APLICATION_NAME: 'wngapi-javascript',
+      APLICATION_DESCRIPTION: 'Example Test Javascript API Library',
+      REDIRECTION: window.location.href
+    })
+    Log('Request:')
+    Log(request.debug(), false, true)
+    request.send().then(res => {
+      Log('Response:')
+      Log(res.debug(), false, true)
+    }).catch((err) => {
+      Log(err, true)
+    })
+    Log()
+  } catch (err) {
+    Log(err, true)
+  }
+}
+
 // Setting consumerKey and creating Wng
 $('#SETKEY').onclick = evt => {
   $('.logs').innerHTML = ''
   consumerKey = $('#KEY').value
   try {
-    WNG = new Wng(consumerKey)
+    WNG.setConsumerKey(consumerKey)
     Log('WNG Object created with "' + consumerKey + '"')
     Log('Endpoint: ' + WNG.endpoint)
     $('#KEY').setAttribute('disabled', true)
