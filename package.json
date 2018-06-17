@@ -1,6 +1,6 @@
 {
   "name": "wngapi-javascript",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Javascript wrapper for WNG API",
   "main": "release/wng.js",
   "module": "src/lib/Wng/index.js",
