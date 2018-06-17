@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "A Javascript wrapper for WNG API",
   "main": "release/wng.js",
-  "module": "src/lib/Wng/index.js",
+  "module": "src/lib/Wng.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open-page example.html",
     "docs": "jsdoc2md src/lib/*.js  > docs/DOCUMENTATION.md",
