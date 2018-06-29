@@ -22,6 +22,7 @@ Wng class
 
 * [Wng](#Wng)
     * [new Wng($consumerKey)](#new_Wng_new)
+    * [.setConsumerKey($consumerKey)](#Wng+setConsumerKey)
     * [.get($path)](#Wng+get) ⇒ [<code>WngRequest</code>](#WngRequest)
     * [.put($path, $data)](#Wng+put) ⇒ [<code>WngRequest</code>](#WngRequest)
     * [.post($path, $data)](#Wng+post) ⇒ [<code>WngRequest</code>](#WngRequest)
@@ -32,6 +33,17 @@ Wng class
 ### new Wng($consumerKey)
 Wng Constructor, adds 'wng' to window object on success
 
+
+| Param | Type | Description |
+| --- | --- | --- |
+| $consumerKey | <code>String</code> | Consumer key needed to call API, get one here https://cas.whyno.group/request_credential |
+
+<a name="Wng+setConsumerKey"></a>
+
+### wng.setConsumerKey($consumerKey)
+Setting consumerKey (depreciated since you can pass it to constructor)
+
+**Kind**: instance method of [<code>Wng</code>](#Wng)  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -23,6 +23,10 @@ class Wng {
     this.endpoint = 'https://alpha.api-eu.whyno.group'
   }
 
+  /**
+   * Setting consumerKey (depreciated since you can pass it to constructor)
+   * @param  {String} $consumerKey  Consumer key needed to call API, get one here https://cas.whyno.group/request_credential
+   */
   setConsumerKey ($consumerKey = '') {
     if (typeof $consumerKey === 'string' && $consumerKey.trim().length > 0) {
       this.consumerKey = $consumerKey.trim()
