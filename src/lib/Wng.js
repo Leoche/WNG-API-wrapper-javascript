@@ -10,8 +10,11 @@ class Wng {
    * @constructs Wng
    * @param  {String} $consumerKey  Consumer key needed to call API, get one here https://cas.whyno.group/request_credential
    */
-  constructor () {
+  constructor ($consumerKey = '') {
     this.consumerKey = null
+    if (typeof $consumerKey === 'string' && $consumerKey.trim().length > 0) {
+      this.setConsumerKey($consumerKey)
+    }
     this.endpoints = {
       'eu': 'https://api-eu.whyno.group',
       'ca': 'https://api-ca.whyno.group',
